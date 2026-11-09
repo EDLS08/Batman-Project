@@ -1,178 +1,214 @@
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    text-decoration: none;
-    list-style-type:none;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background: black;
-}
-
-header {
-    height: 90px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-nav {
-    width: 60%;
-}
-
-ul {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-
-li {
-    color: aliceblue;
-    cursor: pointer;
-    font-size: 19px;
-    transition: 0.5s;
+    background: #000;
+    color: #fff;
     font-family: 'Kdam Thmor Pro', sans-serif;
 }
 
-li:hover {
+header {
+    min-height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 24px;
+    padding: 12px 5%;
+}
+
+nav {
+    width: min(60%, 700px);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    list-style: none;
+}
+
+nav a,
+footer a {
+    color: #f0f8ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a {
+    font-size: 18px;
+}
+
+nav a:hover,
+footer a:hover {
     color: #c00707;
 }
 
-#logo {
+#logo,
+.footer-logo {
+    display: block;
     width: 150px;
     height: auto;
 }
 
 #banner {
-    background-image: url(https://preview.redd.it/6092ltrt8nt71.jpg?auto=webp&s=c26d698d5d92796be9c6ab47f22dba63a7be96c3);
-    background-position: 50% 50%;
-    background-size: cover;
     width: 100%;
-    height: 600px;
+    min-height: 600px;
+    background-image: url('https://preview.redd.it/6092ltrt8nt71.jpg?auto=webp&s=c26d698d5d92796be9c6ab47f22dba63a7be96c3');
+    background-position: center;
+    background-size: cover;
 }
 
 #trailer-container {
-    width: 100%;
-    height: 400px;
     display: flex;
     justify-content: center;
+    padding: 64px 5%;
 }
 
 .content {
-    width: 60%;
+    width: min(1100px, 100%);
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 50px;
+    justify-content: center;
+    gap: 48px;
 }
 
 .trailer {
-    width: 50%;
+    width: 52%;
+    max-height: 360px;
 }
 
-#sinopse {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 30px;
+.synopsis {
+    flex: 1;
 }
 
 .description {
-    color: white;
-    font-size: 19px;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    width: 70%;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.7;
 }
 
 .button {
-    width: 200px;
-    height: 60px;
-    background: #c00707;
-    color: white;
-    padding: 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: .8s;
-    font-size: 18px;
-    display: flex;
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
+    min-height: 52px;
+    margin-top: 24px;
+    padding: 12px 24px;
+    border-radius: 5px;
+    background: #c00707;
+    color: #fff;
+    font-size: 16px;
     font-weight: bold;
-    border: none;
-    outline: none;
-    margin-top: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .button:hover {
-    background: white;
-    color: black;
+    background: #fff;
+    color: #000;
 }
 
 .actor-card {
-    width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    padding: 40px 5% 0;
 }
 
 .cards-content {
-    width: 90%;
+    width: min(1200px, 100%);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 20px;
-    column-gap: 40px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
 }
 
 .card {
-    height: 600px;
-    background-size: cover;
-    background-position: 50% 50%;
-    border-radius: 5px;
-    /* cursor: pointer; */
-    transition: 1s;
+    min-height: 520px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    align-items: flex-end;
     padding: 20px;
-    color: white;
+    border-radius: 5px;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
     font-size: 17px;
+    text-shadow: 0 2px 5px #000;
+    transition: transform 0.3s ease;
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.02);
 }
-.banner-1{
-    background-image: url(https://i.pinimg.com/736x/32/eb/4a/32eb4a4dba411511ef5d84b92d8e1465.jpg);
+
+.banner-1 {
+    background-image: url('https://i.pinimg.com/736x/32/eb/4a/32eb4a4dba411511ef5d84b92d8e1465.jpg');
 }
-.banner-2{
-    background-image: url(https://i.pinimg.com/736x/b0/76/fc/b076fc558eeb9e1dff3e2979f68f915e.jpg);
+
+.banner-2 {
+    background-image: url('https://i.pinimg.com/736x/b0/76/fc/b076fc558eeb9e1dff3e2979f68f915e.jpg');
 }
-.banner-3{
-    background-image: url(https://i.pinimg.com/736x/7f/32/b3/7f32b342d60c58485913c7cc8a331824.jpg);
+
+.banner-3 {
+    background-image: url('https://i.pinimg.com/736x/7f/32/b3/7f32b342d60c58485913c7cc8a331824.jpg');
 }
 
 footer {
-    height: 300px;
-    margin-top: 50px;
-    display:flex;
+    min-height: 240px;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-     }
+    justify-content: space-evenly;
+    gap: 16px;
+    margin-top: 48px;
+    padding: 32px 16px;
+    text-align: center;
+}
 
-     span {
-        color:white;
-        font-family: 'Kdam Thmor Pro', sans-serif;
-     }
+footer span {
+    color: #fff;
+}
 
-     .footer-nav {
-        display:  none;
-     }
-
-     .footer-ls {
-        display:flex;
+@media (max-width: 800px) {
+    header {
         flex-direction: column;
-        align-items: center;
-     }
+        padding: 20px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #banner {
+        min-height: 380px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .trailer {
+        width: 100%;
+    }
+
+    .cards-content {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: 420px;
+    }
+}
