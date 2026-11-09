@@ -1,74 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Página de fã inspirada no filme The Batman, de 2022.">
+    <title>The Batman | Fan Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img id="logo" src="log batman.jpg"/>
-        <nav>
-            <Ul>
-                <a href="index.html">
-                    <li>Home</li>
-                </a>
-                    
-                <a href="conato.html">
-                    <li>Contato</li>
-                </a>
-                <a href="Fotos.html">
-                   <li>Fotos</li>
-                </a>    
-                <a href="comentarios.html">
-                    <li>Comentarios</li>
-                </a>
-            </Ul>
+    <header id="inicio">
+        <a href="#inicio" aria-label="Voltar ao início">
+            <img id="logo" src="log batman.jpg" alt="Logotipo de The Batman">
+        </a>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sinopse">Sinopse</a></li>
+                <li><a href="#trailer-container">Trailer</a></li>
+                <li><a href="#elenco">Elenco</a></li>
+            </ul>
         </nav>
     </header>
-    <div id="banner"></div>
-    <div id="trailer-container">
-        <div class="content">
-            <video controls class="trailer" alt="trailer">
-                <source src="The Batman - Trailer Principal.mp4" type="video/mp4">
-                Seu navegador nao possui suporte para videos
-            </video>
-            <div class="sinopse">
-                <p class="description">Após dois anos espreitando as ruas como Batman, Bruce Wayne se encontra nas profundezas mais sombrias de Gotham City. Com poucos aliados confiáveis, o vigilante solitário se estabelece como a personificação da vingança para a população.</p>
-                <button class="button">Comprar Ingresso</button>
-            </div>
-        </div>
-    </div>
-    <div class="actor-card">
-        <div class="cards-content">
-            <div class="card banner-1">Robert Pattinson-Batman</div>
-            <div class="card banner-2">Zoe Kravitz-Mulher Gato</div>
-            <div class="card banner-3">Jeffrey Wright-Gordon</div>
-        </div>
-    </div>
-    <footer>
-        <img style="object-fit: contain;" id="logo" src="log batman.jpg"/>
-        <span>TODOS OS DIREITOS RESERVADOS ©</span>
-        <span>Desenvolvido pro Edric Leite</span>
-                    <nav class="footer-nav">
-                                <Ul class="footer-ls">
-                                            <a href="index.html">
-                                                <li>Home</li>
-                                            </a>
-                                                
-                                            <a href="conato.html">
-                                                <li>Contato</li>
-                                            </a>
-                                            <a href="Fotos.html">
-                                            <li>Fotos</li>
-                                            </a>    
-                                            <a href="comentarios.html">
-                                                <li>Comentarios</li>
-                                            </a>
-                                </Ul>
-                    </nav>
 
+    <main>
+        <section id="banner" aria-label="Imagem de destaque do filme"></section>
+
+        <section id="trailer-container">
+            <div class="content">
+                <video controls class="trailer" aria-label="Trailer de The Batman">
+                    <source src="The Batman - Trailer Principal.mp4" type="video/mp4">
+                    Seu navegador não oferece suporte para vídeos.
+                </video>
+                <div class="synopsis" id="sinopse">
+                    <p class="description">Após dois anos espreitando as ruas como Batman, Bruce Wayne se encontra nas profundezas mais sombrias de Gotham City. Com poucos aliados confiáveis, o vigilante solitário se estabelece como a personificação da vingança para a população.</p>
+                    <a class="button" href="#trailer-container">Assistir ao trailer</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="actor-card" id="elenco" aria-label="Elenco principal">
+            <div class="cards-content">
+                <article class="card banner-1">Robert Pattinson — Batman</article>
+                <article class="card banner-2">Zoë Kravitz — Mulher-Gato</article>
+                <article class="card banner-3">Jeffrey Wright — Gordon</article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#inicio" aria-label="Voltar ao início">
+            <img class="footer-logo" src="log batman.jpg" alt="Logotipo de The Batman">
+        </a>
+        <span>Projeto educacional de fã</span>
+        <span>Desenvolvido por Edric Leite</span>
+        <a href="#inicio">Voltar ao topo</a>
     </footer>
 </body>
 </html>
